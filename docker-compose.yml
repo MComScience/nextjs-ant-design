@@ -13,6 +13,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
     ports:
       - "80:80"
+      - "8081:8081"
       - "443:443"
     networks:
       - backend
