@@ -7,7 +7,7 @@ services:
     restart: always
     volumes:
       - ./frontend:/var/www/html
-      - ./nginx/conf/nginx.conf:/etc/nginx/conf/nginx.conf:ro
+      # - ./nginx/conf/nginx.conf:/etc/nginx/conf/nginx.conf:ro
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
       - ./logs/nginx:/var/log/nginx
       - /etc/localtime:/etc/localtime:ro
