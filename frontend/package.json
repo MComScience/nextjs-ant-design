@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "export": "next export"
+    "build": "next build src",
+    "start": "next start src",
+    "export": "next export src"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
