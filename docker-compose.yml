@@ -1,0 +1,56 @@
+version: '3'
+services:
+
+  nginx:
+    image: nginx:latest
+    container_name: docker_nginx
+    restart: always
+    volumes:
+      - ./frontend:/var/www/html
+      - ./nginx/conf/nginx.conf:/etc/nginx/conf/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./logs/nginx:/var/log/nginx
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - backend
+      - frontend
+
+  # app:
+  #   image: node:alpine
+  #   volumes:
+  #     - ./backend:/usr/src/app
+  #   working_dir: /usr/src/app
+  #   depends_on:
+  #     - nginx
+  #   environment:
+  #     NODE_ENV: development
+  #   ports:
+  #     - 3000:3000
+  #   command: npm run dev
+
+  api:
+    build: ./backend
+    container_name: docker_api
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+
+  web:
+    build: ./frontend
+    container_name: docker_web
+    restart: always
+    ports:
+      - "5000:5000"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
