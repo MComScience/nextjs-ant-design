@@ -39,6 +39,9 @@ services:
       - "3000:3000"
     volumes:
       - /etc/localtime:/etc/localtime:ro
+    networks:
+      - backend
+      - frontend
 
   web:
     build: ./frontend
@@ -48,6 +51,9 @@ services:
       - "5000:5000"
     volumes:
       - /etc/localtime:/etc/localtime:ro
+    networks:
+      - backend
+      - frontend
 
 networks:
   frontend:
