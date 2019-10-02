@@ -36,7 +36,7 @@ services:
     container_name: docker_api
     restart: always
     ports:
-      - "3000:3000"
+      - "80:3000"
     volumes:
       - /etc/localtime:/etc/localtime:ro
     networks:
@@ -48,7 +48,7 @@ services:
     container_name: docker_web
     restart: always
     ports:
-      - "5000:5000"
+      - "80:5000"
     volumes:
       - /etc/localtime:/etc/localtime:ro
     networks:
