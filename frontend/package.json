@@ -1,6 +1,8 @@
 {
   "name": "with-ant-design",
   "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -16,5 +18,7 @@
     "react": "^16.10.1",
     "react-dom": "^16.10.1"
   },
+  "keywords": [],
+  "author": "",
   "license": "ISC"
 }
