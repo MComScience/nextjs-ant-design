@@ -5,9 +5,7 @@
   "homepage": "https://mcomscience.github.io/nextjs-ant-design",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server-demo.js",
-    "predeploy": "cd frontend && npm run build",
-    "deploy": "cd frontend && gh-pages -d build"
+    "start": "nodemon server-demo.js"
   },
   "keywords": [],
   "author": "m-com3@hotmail.com",
