@@ -1,9 +1,17 @@
 /* eslint-disable */
 const withCss = require('@zeit/next-css')
+// const debug = process.env.NODE_ENV !== "production";
 
 module.exports = withCss({
   distDir: 'build',
   // cssModules: true,
+  /* exportPathMap: function () {
+    return {
+      "/": { page: "/" },
+      "/about": { page: "/about" },
+    }
+  }, */
+  // assetPrefix: !debug ? '/nextjs-ant-design/' : '',
   webpack: (config, { isServer }) => {
     if (isServer) {
       const antStyles = /antd\/.*?\/style\/css.*?/
