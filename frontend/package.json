@@ -16,7 +16,8 @@
     "next": "^9.0.7",
     "null-loader": "2.0.0",
     "react": "^16.10.1",
-    "react-dom": "^16.10.1"
+    "react-dom": "^16.10.1",
+    "nprogress": "^0.2.0"
   },
   "keywords": [],
   "author": "",
