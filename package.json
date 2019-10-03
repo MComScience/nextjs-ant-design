@@ -2,9 +2,12 @@
   "name": "react-api",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://mcomscience.github.io/nextjs-ant-design",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server-demo.js"
+    "start": "nodemon server-demo.js",
+    "predeploy": "cd frontend && npm run build",
+    "deploy": "cd frontend && gh-pages -d build"
   },
   "keywords": [],
   "author": "m-com3@hotmail.com",
@@ -17,6 +20,7 @@
     "morgan": "^1.9.1"
   },
   "devDependencies": {
+    "gh-pages": "^2.1.1",
     "nodemon": "^1.19.3"
   }
 }
