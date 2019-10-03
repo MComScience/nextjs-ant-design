@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 // create a write stream (in append mode)
-var accessLogStream = fs.createWriteStream(path.join(__dirname, "access.log"), {
+var accessLogStream = fs.createWriteStream(path.join(__dirname, "/logs/access.log"), {
   flags: "a"
 })
 

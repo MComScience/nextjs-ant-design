@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 // create a write stream (in append mode)
-var accessLogStream = fs.createWriteStream(path.join(__dirname, "access.log"), {
+var accessLogStream = fs.createWriteStream(path.join(__dirname, "/logs/api/access.log"), {
   flags: "a"
 })
 
@@ -51,6 +51,6 @@ app.get("/users", (req, res) => {
   })
 })
 
-app.listen(5000, function() {
-  console.log("CORS-enabled web server listening on port 5000")
+app.listen(3000, function() {
+  console.log("CORS-enabled web server listening on port 3000")
 })
